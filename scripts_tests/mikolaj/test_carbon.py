@@ -4,7 +4,7 @@ from codecarbon import EmissionsTracker
 import csv
 from datetime import datetime
 
-FOLDER = r"D:\MoAI\Hackatony\BHL25\BHL25\test_dataSet"
+FOLDER = r"D:\MoAI\Hackatony\BHL25\BHL25\scripts_tests\mikolaj\fortest"
 OUTPUT_CSV = "wyniki.csv"
 CARBON_DIR = "carbon_logs"
 
