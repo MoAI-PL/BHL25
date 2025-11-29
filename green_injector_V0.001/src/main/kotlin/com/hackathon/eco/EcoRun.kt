@@ -5,8 +5,13 @@ import com.google.gson.JsonObject
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
+import com.intellij.openapi.ui.DialogWrapper
 import com.intellij.openapi.ui.Messages
+import java.awt.Dimension
 import java.io.File
+import javax.swing.JComponent
+import javax.swing.JScrollPane
+import javax.swing.JTextArea
 
 class EcoRun : AnAction() {
 
@@ -25,34 +30,52 @@ class EcoRun : AnAction() {
         
         if (result != null) {
             val co2Grams = result.get("estimated_co2_grams")?.asDouble ?: 0.0
-            val co2Kg = result.get("estimated_co2_kg")?.asDouble ?: 0.0
             val energyKwh = result.get("estimated_energy_kwh")?.asDouble ?: 0.0
             val operations = result.getAsJsonObject("operations")
             
             val loops = operations?.get("loops")?.asInt ?: 0
             val fileOps = operations?.get("file_operations")?.asInt ?: 0
             val imports = operations?.get("imports")?.asInt ?: 0
+            val functionCalls = operations?.get("function_calls")?.asInt ?: 0
             
             val message = buildString {
                 appendLine("🌍 Carbon Footprint Estimation")
                 appendLine("===================================")
-
                 appendLine()
                 appendLine("📊 Emissions:")
                 appendLine("  • CO₂: ${String.format("%.6f", co2Grams)} g")
-                appendLine("  • CO₂: ${String.format("%.9f", co2Kg)} kg")
-                appendLine("  • Energy: ${String.format("%.6f", energyKwh)} kWh")
+                appendLine("  • Energy: ${String.format("%.9f", energyKwh)} kWh")
                 appendLine()
                 appendLine("🔍 Code Analysis:")
                 appendLine("  • Loops: $loops")
                 appendLine("  • File Operations: $fileOps")
                 appendLine("  • Imports: $imports")
+                appendLine("  • Function Calls: $functionCalls")
                 appendLine()
                 appendLine("💡 Note: Static estimate based on code structure.")
                 appendLine("Actual emissions vary with hardware and runtime.")
             }
             
-            Messages.showInfoMessage(project, message, "Green Coding Assistant - CO₂ Analysis")
+            // Show custom dialog with more height
+            val dialog = object : DialogWrapper(project, false) {
+                init {
+                    title = "Green Coding Assistant - CO₂ Analysis"
+                    init()
+                }
+                
+                override fun createCenterPanel(): JComponent {
+                    val textArea = JTextArea(message).apply {
+                        isEditable = false
+                        lineWrap = true
+                        wrapStyleWord = true
+                        font = font.deriveFont(14f)
+                    }
+                    return JScrollPane(textArea).apply {
+                        preferredSize = Dimension(450, 350)
+                    }
+                }
+            }
+            dialog.show()
         } else {
             Messages.showErrorDialog(
                 project,
