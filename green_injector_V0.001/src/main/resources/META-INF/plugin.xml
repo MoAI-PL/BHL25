@@ -15,13 +15,24 @@
     </extensions>
 
     <actions>
+        <!-- Static eco-code analysis using eco-code-analyzer -->
         <action id="com.hackathon.eco.EcoRun"
                 class="com.hackathon.eco.EcoRun"
-                text="Calculate CO₂ Emissions"
-                description="Calculates estimated carbon footprint of the Python code">
-            
+                text="🌿 Analyze Eco Efficiency"
+                icon="/icons/eco_analyze.svg"
+                description="Analyze code for energy efficiency issues using eco-code-analyzer">
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
             <keyboard-shortcut keymap="$default" first-keystroke="alt E"/>
+        </action>
+        
+        <!-- Runtime carbon tracking using CodeCarbon -->
+        <action id="com.hackathon.eco.EcoRunWithTracking"
+                class="com.hackathon.eco.EcoRunWithTracking"
+                text="🌍 Run &amp; Track CO₂"
+                icon="/icons/eco_run.svg"
+                description="Execute Python code and track actual carbon emissions using CodeCarbon">
+            <add-to-group group-id="EditorPopupMenu" anchor="after" relative-to-action="com.hackathon.eco.EcoRun"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="alt shift E"/>
         </action>
     </actions>
 </idea-plugin>

@@ -5,6 +5,9 @@ import com.google.gson.JsonObject
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
+import com.intellij.openapi.progress.ProgressIndicator
+import com.intellij.openapi.progress.ProgressManager
+import com.intellij.openapi.progress.Task
 import com.intellij.openapi.ui.DialogWrapper
 import com.intellij.openapi.ui.Messages
 import java.awt.Dimension
@@ -13,6 +16,10 @@ import javax.swing.JComponent
 import javax.swing.JScrollPane
 import javax.swing.JTextArea
 
+/**
+ * Action for static CO2 estimation (analyzes code without executing).
+ * Uses eco-code-analyzer library for static analysis.
+ */
 class EcoRun : AnAction() {
 
     private val gson = Gson()
@@ -25,125 +32,187 @@ class EcoRun : AnAction() {
         // Get the entire file content
         val code = document.text
         
-        // Calculate CO2 emissions
-        val result = calculateCO2(code)
-        
-        if (result != null) {
-            val co2Grams = result.get("estimated_co2_grams")?.asDouble ?: 0.0
-            val energyKwh = result.get("estimated_energy_kwh")?.asDouble ?: 0.0
-            val operations = result.getAsJsonObject("operations")
-            
-            val loops = operations?.get("loops")?.asInt ?: 0
-            val fileOps = operations?.get("file_operations")?.asInt ?: 0
-            val imports = operations?.get("imports")?.asInt ?: 0
-            val functionCalls = operations?.get("function_calls")?.asInt ?: 0
-            
-            val message = buildString {
-                appendLine("🌍 Carbon Footprint Estimation")
-                appendLine("===================================")
-                appendLine()
-                appendLine("📊 Emissions:")
-                appendLine("  • CO₂: ${String.format("%.6f", co2Grams)} g")
-                appendLine("  • Energy: ${String.format("%.9f", energyKwh)} kWh")
-                appendLine()
-                appendLine("🔍 Code Analysis:")
-                appendLine("  • Loops: $loops")
-                appendLine("  • File Operations: $fileOps")
-                appendLine("  • Imports: $imports")
-                appendLine("  • Function Calls: $functionCalls")
-                appendLine()
-                appendLine("💡 Note: Static estimate based on code structure.")
-                appendLine("Actual emissions vary with hardware and runtime.")
-            }
-            
-            // Show custom dialog with more height
-            val dialog = object : DialogWrapper(project, false) {
-                init {
-                    title = "Green Coding Assistant - CO₂ Analysis"
-                    init()
-                }
+        // Run analysis in background
+        ProgressManager.getInstance().run(object : Task.Backgroundable(project, "Analyzing Code Efficiency...", false) {
+            override fun run(indicator: ProgressIndicator) {
+                indicator.isIndeterminate = true
+                indicator.text = "Running eco-code analysis..."
                 
-                override fun createCenterPanel(): JComponent {
-                    val textArea = JTextArea(message).apply {
-                        isEditable = false
-                        lineWrap = true
-                        wrapStyleWord = true
-                        font = font.deriveFont(14f)
-                    }
-                    return JScrollPane(textArea).apply {
-                        preferredSize = Dimension(450, 350)
-                    }
+                val result = analyzeCode(code)
+                
+                // Show results on EDT
+                com.intellij.openapi.application.ApplicationManager.getApplication().invokeLater {
+                    showAnalysisResults(project, result)
                 }
             }
-            dialog.show()
-        } else {
-            Messages.showErrorDialog(
-                project,
-                "Could not calculate CO2 emissions. Make sure Python is installed.",
-                "Green Coding Assistant"
-            )
-        }
+        })
     }
     
-    private fun calculateCO2(code: String): JsonObject? {
+    private fun analyzeCode(code: String): JsonObject? {
         return try {
-            // Find Python executable
             val pythonCmd = findPython()
+            val scriptPath = getScriptPath("ecocode_analyzer.py")
             
-            // Get the estimator script from resources
-            val scriptPath = getScriptPath("co2_estimator.py")
-            
-            // Execute Python script
             val process = ProcessBuilder(pythonCmd, scriptPath)
                 .redirectErrorStream(true)
                 .start()
             
-            // Write code to stdin
             process.outputStream.bufferedWriter().use { writer ->
                 writer.write(code)
                 writer.flush()
             }
             
-            // Read JSON output
             val output = process.inputStream.bufferedReader().use { it.readText() }
             process.waitFor()
             
-            // Parse JSON
             gson.fromJson(output, JsonObject::class.java)
         } catch (e: Exception) {
-            // Fallback to simple estimation
-            fallbackEstimation(code)
+            fallbackAnalysis(code)
         }
     }
     
-    private fun fallbackEstimation(code: String): JsonObject {
-        val lines = code.split("\n")
-        var loopCount = 0
-        var fileOps = 0
-        var imports = 0
-        
-        for (line in lines) {
-            if ("for " in line && "range(" in line) loopCount++
-            if ("open(" in line) fileOps++
-            if (line.trim().startsWith("import ") || line.trim().startsWith("from ")) imports++
+    private fun showAnalysisResults(project: com.intellij.openapi.project.Project, result: JsonObject?) {
+        if (result == null) {
+            Messages.showErrorDialog(project, "Analysis failed.", "Green Coding Assistant")
+            return
         }
         
-        // Simple estimation: 0.001g per loop, 0.00001g per file op, 0.00002g per import
-        val totalCO2 = (loopCount * 0.001) + (fileOps * 0.00001) + (imports * 0.00002)
+        val ecoScore = result.get("eco_score")?.asInt ?: 0
+        val totalIssues = result.get("total_issues")?.asInt ?: 0
+        val issues = result.getAsJsonArray("issues")
+        val summary = result.getAsJsonObject("summary")
+        
+        val errors = summary?.get("errors")?.asInt ?: 0
+        val warnings = summary?.get("warnings")?.asInt ?: 0
+        val infos = summary?.get("info")?.asInt ?: 0
+        
+        val message = buildString {
+            appendLine("🌿 Eco Code Analysis Report")
+            appendLine("═══════════════════════════════════════")
+            appendLine()
+            appendLine("📊 Eco Score: $ecoScore/100 ${getScoreEmoji(ecoScore)}")
+            appendLine()
+            appendLine("📋 Summary:")
+            appendLine("  • Total Issues: $totalIssues")
+            appendLine("  • 🔴 Errors: $errors")
+            appendLine("  • 🟡 Warnings: $warnings")
+            appendLine("  • 🔵 Info: $infos")
+            appendLine()
+            
+            if (issues != null && issues.size() > 0) {
+                appendLine("🔍 Issues Found:")
+                appendLine("───────────────────────────────────────")
+                
+                for (issue in issues) {
+                    val obj = issue.asJsonObject
+                    val line = obj.get("line")?.asInt ?: 0
+                    val severity = obj.get("severity")?.asString ?: "info"
+                    val type = obj.get("type")?.asString ?: ""
+                    val msg = obj.get("message")?.asString ?: ""
+                    val suggestion = obj.get("suggestion")?.asString ?: ""
+                    val impact = obj.get("co2_impact")?.asString ?: "low"
+                    
+                    val icon = when (severity) {
+                        "error" -> "🔴"
+                        "warning" -> "🟡"
+                        else -> "🔵"
+                    }
+                    
+                    if (line > 0) {
+                        appendLine()
+                        appendLine("$icon Line $line: $msg")
+                        if (suggestion.isNotEmpty()) {
+                            appendLine("   💡 $suggestion")
+                        }
+                        appendLine("   ⚡ CO₂ Impact: $impact")
+                    }
+                }
+            } else {
+                appendLine("✅ No issues found! Your code is eco-friendly.")
+            }
+            
+            appendLine()
+            appendLine("───────────────────────────────────────")
+            appendLine("💡 Tip: Use 'Run & Track CO₂' to measure")
+            appendLine("   actual emissions during execution.")
+        }
+        
+        val dialog = object : DialogWrapper(project, false) {
+            init {
+                title = "Green Coding Assistant - Eco Analysis"
+                init()
+            }
+            
+            override fun createCenterPanel(): JComponent {
+                val textArea = JTextArea(message).apply {
+                    isEditable = false
+                    lineWrap = true
+                    wrapStyleWord = true
+                    font = font.deriveFont(13f)
+                }
+                return JScrollPane(textArea).apply {
+                    preferredSize = Dimension(500, 450)
+                }
+            }
+        }
+        dialog.show()
+    }
+    
+    private fun getScoreEmoji(score: Int): String {
+        return when {
+            score >= 90 -> "🌟 Excellent!"
+            score >= 70 -> "✅ Good"
+            score >= 50 -> "⚠️ Needs improvement"
+            else -> "🔴 Poor"
+        }
+    }
+    
+    private fun fallbackAnalysis(code: String): JsonObject {
+        val issues = mutableListOf<JsonObject>()
+        val lines = code.split("\n")
+        
+        for ((i, line) in lines.withIndex()) {
+            val lineNumber = i + 1
+            val trimmed = line.trim()
+            
+            if (trimmed.startsWith("for ") && "range(" in trimmed) {
+                val issue = JsonObject()
+                issue.addProperty("line", lineNumber)
+                issue.addProperty("severity", "warning")
+                issue.addProperty("type", "inefficient_loop")
+                issue.addProperty("message", "Inefficient loop detected")
+                issue.addProperty("suggestion", "Consider using NumPy or list comprehension")
+                issue.addProperty("co2_impact", "medium")
+                issues.add(issue)
+            }
+            
+            if ("open(" in line && "with " !in line && "def " !in line) {
+                val issue = JsonObject()
+                issue.addProperty("line", lineNumber)
+                issue.addProperty("severity", "warning")
+                issue.addProperty("type", "resource_leak")
+                issue.addProperty("message", "Resource leak risk - file not using context manager")
+                issue.addProperty("suggestion", "Use 'with open(...) as f:' pattern")
+                issue.addProperty("co2_impact", "low")
+                issues.add(issue)
+            }
+        }
         
         val result = JsonObject()
-        result.addProperty("estimated_co2_grams", totalCO2)
-        result.addProperty("estimated_co2_kg", totalCO2 / 1000)
-        result.addProperty("estimated_energy_kwh", totalCO2 * 0.002)
+        result.addProperty("eco_score", 100 - (issues.size * 10))
+        result.addProperty("total_issues", issues.size)
         
-        val ops = JsonObject()
-        ops.addProperty("loops", loopCount)
-        ops.addProperty("file_operations", fileOps)
-        ops.addProperty("imports", imports)
-        ops.addProperty("function_calls", 0)
-        result.add("operations", ops)
+        val summary = JsonObject()
+        summary.addProperty("errors", 0)
+        summary.addProperty("warnings", issues.size)
+        summary.addProperty("info", 0)
+        result.add("summary", summary)
         
-        result.addProperty("note", "Fallback estimation (Python not available)")
+        val issuesArray = com.google.gson.JsonArray()
+        issues.forEach { issuesArray.add(it) }
+        result.add("issues", issuesArray)
+        
+        result.addProperty("note", "Fallback analysis (Python analyzer not available)")
         
         return result
     }
@@ -165,7 +234,11 @@ class EcoRun : AnAction() {
     private fun getScriptPath(scriptName: String): String {
         val resource = javaClass.classLoader.getResource("scripts/$scriptName")
         if (resource != null) {
-            return File(resource.toURI()).absolutePath
+            try {
+                return File(resource.toURI()).absolutePath
+            } catch (e: Exception) {
+                // URI might not be a file (e.g., in JAR)
+            }
         }
         
         val tempFile = File.createTempFile("eco_", "_$scriptName")
