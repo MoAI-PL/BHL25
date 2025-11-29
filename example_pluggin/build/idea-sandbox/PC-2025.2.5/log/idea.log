@@ -1,0 +1,282 @@
+2025-11-29 17:26:08,853 [     19]   INFO - #c.i.p.i.b.AppStarter - ------------------------------------------------------ IDE STARTED ------------------------------------------------------
+2025-11-29 17:26:09,100 [    266]   INFO - #c.i.p.i.b.AppStarter - Will skip the config import to directory "/home/jakubgoleman/best_hack/intellij-platform-plugin-template-main/build/idea-sandbox/PC-2025.2.5/config" (exists = true). Current entries: "options", "disabled_plugins.txt".
+2025-11-29 17:26:09,100 [    266]   INFO - #c.i.p.i.b.AppStarter - JNA library (64-bit) loaded in 84 ms
+2025-11-29 17:26:09,101 [    267]   INFO - #c.i.p.i.b.AppStarter - IDE: PyCharm (build #PC-252.28238.29, Thu, 27 Nov 2025 14:05:00 GMT)
+2025-11-29 17:26:09,101 [    267]   INFO - #c.i.p.i.b.AppStarter - OS: Linux (6.6.99-08726-g28eab9a1f61e)
+2025-11-29 17:26:09,101 [    267]   INFO - #c.i.p.i.b.AppStarter - JRE: 21.0.9+10-b1038.76, aarch64 (JetBrains s.r.o.)
+2025-11-29 17:26:09,101 [    267]   INFO - #c.i.p.i.b.AppStarter - JVM: 21.0.9+10-b1038.76 (OpenJDK 64-Bit Server VM)
+2025-11-29 17:26:09,102 [    268]   INFO - #c.i.p.i.b.AppStarter - PID: 7354
+2025-11-29 17:26:09,102 [    268]   INFO - #c.i.p.i.b.AppStarter - desktop: X-Generic
+2025-11-29 17:26:09,102 [    268]   INFO - #c.i.p.i.b.AppStarter - toolkit: sun.awt.HeadlessToolkit
+2025-11-29 17:26:09,227 [    393]   INFO - #c.i.p.i.b.AppStarter - JVM options: [-Daether.connector.resumeDownloads=false, -Dawt.lock.fair=true, -Dcompose.swing.render.on.graphics=true, -Dide.native.launcher=false, -Didea.config.path=/home/jakubgoleman/best_hack/intellij-platform-plugin-template-main/build/idea-sandbox/PC-2025.2.5/config, -Didea.l10n.keys=only, -Didea.log.path=/home/jakubgoleman/best_hack/intellij-platform-plugin-template-main/build/idea-sandbox/PC-2025.2.5/log, -Didea.paths.selector=PyCharmCE2025.2, -Didea.platform.prefix=PyCharmCore, -Didea.plugins.path=/home/jakubgoleman/best_hack/intellij-platform-plugin-template-main/build/idea-sandbox/PC-2025.2.5/plugins, -Didea.required.plugins.id=com.hackathon.eco, -Didea.system.path=/home/jakubgoleman/best_hack/intellij-platform-plugin-template-main/build/idea-sandbox/PC-2025.2.5/system, -Didea.vendor.name=JetBrains, -Dintellij.platform.runtime.repository.path=/home/jakubgoleman/.gradle/caches/9.2.1/transforms/afbf46b7f61ebd1abb56f81b7a19c113/transformed/pycharm-community-2025.2.5-aarch64/modules/module-descriptors.dat, -Dio.netty.allocator.type=pooled, -Djava.nio.file.spi.DefaultFileSystemProvider=com.intellij.platform.core.nio.fs.MultiRoutingFileSystemProvider, -Djava.system.class.loader=com.intellij.util.lang.PathClassLoader, -Djava.util.zip.use.nio.for.zip.file.access=true, -Djbr.catch.SIGABRT=true, -Djdk.attach.allowAttachSelf=true, -Djdk.http.auth.tunneling.disabledSchemes="", -Djdk.module.illegalAccess.silent=true, -Djdk.nio.maxCachedBufferSize=2097152, -Djna.boot.library.path=/home/jakubgoleman/.gradle/caches/9.2.1/transforms/afbf46b7f61ebd1abb56f81b7a19c113/transformed/pycharm-community-2025.2.5-aarch64/lib/jna/aarch64, -Djna.noclasspath=true, -Djna.nosys=true, -Dllm.show.ai.promotion.window.on.start=false, -Dplugin.path=/home/jakubgoleman/best_hack/intellij-platform-plugin-template-main/build/idea-sandbox/PC-2025.2.5/plugins/IntelliJ Platform Plugin Template, -Dpty4j.preferred.native.folder=/home/jakubgoleman/.gradle/caches/9.2.1/transforms/afbf46b7f61ebd1abb56f81b7a19c113/transformed/pycharm-community-2025.2.5-aarch64/lib/pty4j, -Dsplash=true, -Dsun.io.useCanonCaches=false, -Dsun.java2d.metal=true, -Dsun.tools.attach.tmp.only=true, -XX:JbrShrinkingGcMaxHeapFreeRatio=40, -XX:ReservedCodeCacheSize=512m, -XX:+HeapDumpOnOutOfMemoryError, -XX:-OmitStackTraceInFastThrow, -XX:CICompilerCount=2, -XX:+IgnoreUnrecognizedVMOptions, -XX:+UnlockDiagnosticVMOptions, -XX:TieredOldPercentage=100000, -Xbootclasspath/a:/home/jakubgoleman/.gradle/caches/9.2.1/transforms/afbf46b7f61ebd1abb56f81b7a19c113/transformed/pycharm-community-2025.2.5-aarch64/lib/nio-fs.jar, --add-opens=java.base/java.io=ALL-UNNAMED, --add-opens=java.base/java.lang=ALL-UNNAMED, --add-opens=java.base/java.lang.ref=ALL-UNNAMED, --add-opens=java.base/java.lang.reflect=ALL-UNNAMED, --add-opens=java.base/java.net=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.base/java.nio.charset=ALL-UNNAMED, --add-opens=java.base/java.text=ALL-UNNAMED, --add-opens=java.base/java.time=ALL-UNNAMED, --add-opens=java.base/java.util=ALL-UNNAMED, --add-opens=java.base/java.util.concurrent=ALL-UNNAMED, --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED, --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED, --add-opens=java.base/jdk.internal.vm=ALL-UNNAMED, --add-opens=java.base/sun.net.dns=ALL-UNNAMED, --add-opens=java.base/sun.nio.ch=ALL-UNNAMED, --add-opens=java.base/sun.nio.fs=ALL-UNNAMED, --add-opens=java.base/sun.security.ssl=ALL-UNNAMED, --add-opens=java.base/sun.security.util=ALL-UNNAMED, --add-opens=java.desktop/com.sun.java.swing=ALL-UNNAMED, --add-opens=java.desktop/com.sun.java.swing.plaf.gtk=ALL-UNNAMED, --add-opens=java.desktop/java.awt=ALL-UNNAMED, --add-opens=java.desktop/java.awt.dnd.peer=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-opens=java.desktop/java.awt.font=ALL-UNNAMED, --add-opens=java.desktop/java.awt.image=ALL-UNNAMED, --add-opens=java.desktop/java.awt.peer=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.text=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.text.html=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.text.html.parser=ALL-UNNAMED, --add-opens=java.desktop/sun.awt=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.datatransfer=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.image=ALL-UNNAMED, --add-opens=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.java2d=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.management/sun.management=ALL-UNNAMED, --add-opens=jdk.attach/sun.tools.attach=ALL-UNNAMED, --add-opens=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED, --add-opens=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED, --add-opens=jdk.jdi/com.sun.tools.jdi=ALL-UNNAMED, -Xms256m, -Xmx1500m, -Dfile.encoding=UTF-8, -Duser.country=US, -Duser.language=en, -Duser.variant, -ea, -Dawt.toolkit.name=XToolkit]
+2025-11-29 17:26:09,256 [    422]   INFO - #c.i.p.i.b.AppStarter - args: traverseUI /home/jakubgoleman/best_hack/intellij-platform-plugin-template-main/build/tmp/buildSearchableOptions true
+2025-11-29 17:26:09,256 [    422]   INFO - #c.i.p.i.b.AppStarter - library path: /usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib
+2025-11-29 17:26:09,257 [    423]   INFO - #c.i.p.i.b.AppStarter - boot library path: /home/jakubgoleman/.gradle/caches/9.2.1/transforms/afbf46b7f61ebd1abb56f81b7a19c113/transformed/pycharm-community-2025.2.5-aarch64/jbr/lib
+2025-11-29 17:26:09,291 [    457]   INFO - #c.i.p.i.b.AppStarter - locale=en_US JNU=UTF-8 file.encoding=UTF-8
+    idea.config.path=/home/jakubgoleman/best_hack/intellij-platform-plugin-template-main/build/idea-sandbox/PC-2025.2.5/config
+    idea.system.path=/home/jakubgoleman/best_hack/intellij-platform-plugin-template-main/build/idea-sandbox/PC-2025.2.5/system
+    idea.plugins.path=/home/jakubgoleman/best_hack/intellij-platform-plugin-template-main/build/idea-sandbox/PC-2025.2.5/plugins
+    idea.log.path=/home/jakubgoleman/best_hack/intellij-platform-plugin-template-main/build/idea-sandbox/PC-2025.2.5/log
+2025-11-29 17:26:09,334 [    500]   INFO - #c.i.p.i.b.AppStarter - CPU cores: 8; ForkJoinPool.commonPool: java.util.concurrent.ForkJoinPool@730cb4cc[Running, parallelism = 8, size = 0, active = 0, running = 0, steals = 0, tasks = 0, submissions = 0]; factory: com.intellij.concurrency.IdeaForkJoinWorkerThreadFactory@659f0636
+2025-11-29 17:26:09,814 [    980]   INFO - #c.i.i.p.PluginManager - Using broken plugins file from IDE distribution
+2025-11-29 17:26:09,816 [    982]   INFO - #c.i.i.p.PluginManager - PluginMainDescriptor(name=Eco-Cluster-Optimizer, id=com.hackathon.eco, version=1.0.0, isBundled=false, path=~/best_hack/intellij-platform-plugin-template-main/build/idea-sandbox/PC-2025.2.5/plugins/IntelliJ Platform Plugin Template) overrides PluginMainDescriptor(name=Eco-Cluster-Optimizer, id=com.hackathon.eco, version=1.0.0, isBundled=false, path=~/best_hack/intellij-platform-plugin-template-main/build/idea-sandbox/PC-2025.2.5/plugins/IntelliJ Platform Plugin Template)
+2025-11-29 17:26:09,883 [   1049]   INFO - #c.i.i.p.PluginManager - Plugin set resolution:
+Module intellij.json.frontend.split is not enabled because dependency intellij.platform.frontend.split is not available
+Module intellij.yaml.frontend.split is not enabled because dependency intellij.platform.frontend.split is not available
+Module intellij.qt.clion is not enabled because dependency intellij.cidr.core is not available
+Module intellij.terminal.frontend.split is not enabled because dependency intellij.platform.frontend.split is not available
+Module intellij.fullLine.terraform is not enabled because dependency org.intellij.plugins.hcl is not available
+Module intellij.fullLine.rust is not enabled because dependency com.jetbrains.rust is not available
+Module intellij.fullLine.ruby is not enabled because dependency intellij.ruby.backend is not available
+Module intellij.fullLine.rider is not enabled because dependency com.intellij.modules.rider.cpp.core is not available
+Module intellij.fullLine.rider.csharp is not enabled because dependency intellij.fullLine.rider is not available
+Module intellij.fullLine.rider.cpp is not enabled because dependency intellij.fullLine.rider is not available
+Module intellij.fullLine.php is not enabled because dependency com.jetbrains.php is not available
+Module intellij.fullLine.kotlin is not enabled because dependency org.jetbrains.kotlin is not available
+Module intellij.fullLine.js is not enabled because dependency JavaScript is not available
+Module intellij.fullLine.java is not enabled because dependency intellij.jvm.analysis.impl is not available
+Module intellij.fullLine.html is not enabled because dependency HtmlTools is not available
+Module intellij.fullLine.go is not enabled because dependency org.jetbrains.plugins.go is not available
+Module intellij.fullLine.css is not enabled because dependency com.intellij.css is not available
+Module intellij.fullLine.css.sass is not enabled because dependency intellij.fullLine.css is not available
+Module intellij.fullLine.css.postcss is not enabled because dependency intellij.fullLine.css is not available
+Module intellij.fullLine.css.less is not enabled because dependency intellij.fullLine.css is not available
+Module intellij.fullLine.cpp is not enabled because dependency intellij.cidr.lang.base is not available
+Module intellij.fullLine.federatedCompute is not enabled because dependency com.intellij.federatedCompute is not available
+Module intellij.fullLine.terraform.local is not enabled because dependency intellij.fullLine.terraform is not available
+Module intellij.fullLine.rust.local is not enabled because dependency intellij.fullLine.rust is not available
+Module intellij.fullLine.ruby.local is not enabled because dependency intellij.fullLine.ruby is not available
+Module intellij.fullLine.rider.local is not enabled because dependency intellij.fullLine.rider is not available
+Module intellij.fullLine.rider.csharp.local is not enabled because dependency intellij.fullLine.rider is not available
+Module intellij.fullLine.rider.cpp.local is not enabled because dependency intellij.fullLine.rider is not available
+Module intellij.fullLine.php.local is not enabled because dependency intellij.fullLine.php is not available
+Module intellij.fullLine.kotlin.local is not enabled because dependency intellij.fullLine.kotlin is not available
+Module intellij.fullLine.js.local is not enabled because dependency intellij.fullLine.js is not available
+Module intellij.fullLine.js.vue is not enabled because dependency intellij.fullLine.js is not available
+Module intellij.fullLine.js.vue.local is not enabled because dependency intellij.fullLine.js is not available
+Module intellij.fullLine.js.svelte is not enabled because dependency intellij.fullLine.js is not available
+Module intellij.fullLine.js.svelte.local is not enabled because dependency intellij.fullLine.js is not available
+Module intellij.fullLine.js.astro is not enabled because dependency intellij.fullLine.js is not available
+Module intellij.fullLine.js.astro.local is not enabled because dependency intellij.fullLine.js is not available
+Module intellij.fullLine.java.local is not enabled because dependency intellij.fullLine.java is not available
+Module intellij.fullLine.html.local is not enabled because dependency intellij.fullLine.html is not available
+Module intellij.fullLine.go.local is not enabled because dependency intellij.fullLine.go is not available
+Module intellij.fullLine.css.local is not enabled because dependency intellij.fullLine.css is not available
+Module intellij.fullLine.css.sass.local is not enabled because dependency intellij.fullLine.css is not available
+Module intellij.fullLine.css.postcss.local is not enabled because dependency intellij.fullLine.css is not available
+Module intellij.fullLine.css.less.local is not enabled because dependency intellij.fullLine.css is not available
+Module intellij.fullLine.cpp.local is not enabled because dependency intellij.fullLine.cpp is not available
+Module intellij.kotlin.dev is not enabled because dependency org.jetbrains.kotlin is not available
+Module intellij.groovy.dev is not enabled because dependency org.intellij.groovy is not available
+Module intellij.java.dev is not enabled because dependency com.intellij.java is not available
+Module intellij.searchEverywhereMl.ranking.java is not enabled because dependency com.intellij.java is not available
+Module intellij.fullLine.kotlin.jupyter is not enabled because dependency intellij.fullLine.kotlin is not available
+Module intellij.fullLine.kotlin.jupyter.local is not enabled because dependency intellij.fullLine.kotlin.local is not available
+Module intellij.scientific.tables.charts is not enabled because dependency intellij.grid.charts.impl is not available
+Module intellij.editorconfig.frontend.split is not enabled because dependency intellij.platform.frontend.split is not available
+Module intellij.marketplace.statistics is not enabled because dependency com.intellij.modules.androidstudio is not available
+Module intellij.station.frontend.split is not enabled because dependency com.intellij.jetbrains.client is not available
+Module intellij.ml.llm.completion is not enabled because dependency intellij.ml.llm.core is not available
+Module intellij.ml.llm.xml.completion is not enabled because dependency intellij.ml.llm.completion is not available
+Module intellij.ml.llm.javaee.spring.completion is not enabled because dependency intellij.ml.llm.completion is not available
+Module intellij.ml.llm.vcs.completion is not enabled because dependency intellij.ml.llm.completion is not available
+Module intellij.ml.llm.rider.csharp.completion is not enabled because dependency intellij.fullLine.rider.csharp is not available
+Module intellij.ml.llm.rider.cpp.completion is not enabled because dependency intellij.fullLine.rider.cpp is not available
+Module intellij.ml.llm.xdebugger.completion is not enabled because dependency intellij.ml.llm.completion is not available
+Module intellij.ml.llm.json.completion is not enabled because dependency intellij.ml.llm.completion is not available
+Module intellij.ml.llm.rust.completion is not enabled because dependency intellij.fullLine.rust is not available
+Module intellij.ml.llm.yaml.completion is not enabled because dependency intellij.ml.llm.completion is not available
+Module intellij.ml.llm.yaml.javaee.spring.completion is not enabled because dependency intellij.ml.llm.completion is not available
+Module intellij.ml.llm.yaml.json.completion is not enabled because dependency intellij.ml.llm.completion is not available
+Module intellij.ml.llm.sql.completion is not enabled because dependency intellij.ml.llm.libraries.grazie is not available
+Module intellij.ml.llm.terminal.completion is not enabled because dependency intellij.ml.llm.completion is not available
+Module intellij.ml.llm.cpp.completion is not enabled because dependency intellij.fullLine.cpp is not available
+Module intellij.ml.llm.properties.completion is not enabled because dependency intellij.ml.llm.completion is not available
+Module intellij.ml.llm.markdown.completion is not enabled because dependency intellij.ml.llm.completion is not available
+Module intellij.ml.llm.text.completion is not enabled because dependency intellij.ml.llm.completion is not available
+Module intellij.ml.llm.terraform.completion is not enabled because dependency intellij.fullLine.terraform is not available
+Module intellij.ml.llm.html.completion is not enabled because dependency intellij.fullLine.html is not available
+Module intellij.ml.llm.css.completion is not enabled because dependency intellij.fullLine.css is not available
+Module intellij.ml.llm.css.postcss.completion is not enabled because dependency intellij.fullLine.css.postcss is not available
+Module intellij.ml.llm.css.sass.completion is not enabled because dependency intellij.fullLine.css is not available
+Module intellij.ml.llm.css.less.completion is not enabled because dependency intellij.fullLine.css is not available
+Module intellij.ml.llm.javascript.completion is not enabled because dependency intellij.fullLine.js is not available
+Module intellij.ml.llm.javascript.svelte.completion is not enabled because dependency intellij.fullLine.js is not available
+Module intellij.ml.llm.javascript.astro.completion is not enabled because dependency intellij.fullLine.js is not available
+Module intellij.ml.llm.javascript.vue.completion is not enabled because dependency intellij.fullLine.js is not available
+Module intellij.ml.llm.php.completion is not enabled because dependency intellij.fullLine.php is not available
+Module intellij.ml.llm.ruby.completion is not enabled because dependency intellij.fullLine.ruby is not available
+Module intellij.ml.llm.rbs.completion is not enabled because dependency intellij.ml.llm.core is not available
+Module intellij.ml.llm.go.completion is not enabled because dependency intellij.fullLine.go is not available
+Module intellij.ml.llm.kotlin.completion is not enabled because dependency intellij.fullLine.kotlin is not available
+Module intellij.ml.llm.jupyter.kotlin.completion is not enabled because dependency intellij.fullLine.kotlin.jupyter is not available
+Module intellij.ml.llm.java.completion is not enabled because dependency intellij.fullLine.java is not available
+Module intellij.ml.llm.erb.completion is not enabled because dependency intellij.fullLine.ruby is not available
+Module intellij.ml.llm.completion.nextEdits.proxy is not enabled because dependency intellij.ml.llm.completion is not available
+Module intellij.ml.llm.experiments is not enabled because dependency intellij.ml.llm.core is not available
+Module intellij.llmInstaller.ds is not enabled because dependency intellij.dataWrangler.llm is not available
+Module intellij.kotlin.onboarding-promoter is not enabled because dependency kotlin.features-trainer is not available
+Module intellij.featuresTrainer.onboarding is not enabled because dependency intellij.platform.ide.newUsersOnboarding is not available
+Module intellij.ml.llm.python.completion is not enabled because dependency intellij.ml.llm.libraries.grazie is not available
+Module intellij.python.community.plugin.impl is not enabled because dependency com.intellij.modules.python-in-non-pycharm-ide-capable is not available
+Module intellij.python.community.plugin.java is not enabled because dependency intellij.python.community.plugin.impl is not available
+Module intellij.python.community.plugin.minorRider is not enabled because dependency intellij.python.community.plugin.impl is not available
+Module intellij.python.community.plugin.minor is not enabled because dependency intellij.python.community.plugin.impl is not available
+Module intellij.toml.frontend.split is not enabled because dependency intellij.platform.frontend.split is not available
+Module intellij.jupyter.py.psi is not enabled because dependency com.intellij.modules.python-single-distributive-capable is not available
+Module intellij.fullLine.python.jupyter.local is not enabled because dependency intellij.jupyter.py.psi is not available
+Module intellij.jupyter.py is not enabled because dependency intellij.jupyter.py.psi is not available
+Module intellij.ml.llm.jupyter.python.completion is not enabled because dependency intellij.ml.llm.libraries.grazie is not available
+Module intellij.jupyter.py.wsl is not enabled because dependency intellij.jupyter.py is not available
+Module intellij.jupyter.py.ift is not enabled because dependency intellij.jupyter.py is not available
+Module intellij.jupyter.py.pro is not enabled because dependency intellij.jupyter.py is not available
+Module intellij.jupyter.split.frontend.py is not enabled because dependency intellij.platform.frontend.split is not available
+Module intellij.jupyter.split.frontend is not enabled because dependency intellij.platform.frontend.split is not available
+Module intellij.grazie.java is not enabled because dependency com.intellij.java is not available
+Module intellij.vcs.git.coverage is not enabled because dependency intellij.platform.coverage is not available
+Module intellij.qodana.jvm.swagger is not enabled because dependency com.intellij.swagger is not available
+Module intellij.qodana.jvm.maven is not enabled because dependency org.jetbrains.idea.maven is not available
+Module intellij.qodana.jvm.java is not enabled because dependency com.intellij.java is not available
+Module intellij.qodana.jvm.kotlin is not enabled because dependency org.jetbrains.kotlin is not available
+Module intellij.qodana.jvm.groovy is not enabled because dependency org.intellij.groovy is not available
+Module intellij.qodana.jvm.gradle is not enabled because dependency intellij.qodana.jvm.java is not available
+Module intellij.qodana.jvm.dev is not enabled because dependency intellij.java.dev is not available
+Module intellij.qodana.inspectionKts.kotlin is not enabled because dependency org.jetbrains.kotlin is not available
+Module intellij.qodana.inspectionKts.js is not enabled because dependency JavaScript is not available
+Module intellij.qodana.cpp is not enabled because dependency intellij.cidr.projectModel is not available
+Module intellij.qodana.coverage is not enabled because dependency intellij.platform.coverage is not available
+Module intellij.qodana.jvm.coverage is not enabled because dependency intellij.qodana.coverage is not available
+Module intellij.qodana.python.coverage is not enabled because dependency intellij.qodana.coverage is not available
+Module intellij.qodana.php is not enabled because dependency intellij.qodana.coverage is not available
+Module intellij.qodana.js is not enabled because dependency intellij.qodana.coverage is not available
+Module intellij.qodana.go is not enabled because dependency intellij.qodana.coverage is not available
+Module intellij.execution.process.elevation.backend.split is not enabled because dependency intellij.execution.process.elevation is not available
+Module intellij.docker.backend.split is not enabled because dependency intellij.clouds.docker.remoteRun is not available
+Module intellij.java.backend.split is not enabled because dependency com.intellij.java is not available
+Module intellij.notebooks.backend.split is not enabled because dependency Pythonid is not available
+Module intellij.jupyter.split.backend is not enabled because dependency intellij.notebooks.backend.split is not available
+Module intellij.packageChecker.php is not enabled because dependency com.jetbrains.php is not available
+Module intellij.packageChecker.javascript is not enabled because dependency JavaScript is not available
+Module intellij.packageChecker.java is not enabled because dependency com.intellij.java is not available
+Module intellij.packageChecker.maven is not enabled because dependency intellij.packageChecker.java is not available
+Module intellij.packageChecker.gradle is not enabled because dependency intellij.gradle.dependencyUpdater is not available
+Module intellij.packageChecker.go is not enabled because dependency org.jetbrains.plugins.go is not available
+Module intellij.packageChecker.amper is not enabled because dependency intellij.packageChecker.java is not available
+Module intellij.performanceTesting.async.core is not enabled because dependency intellij.profiler.asyncOne is not available
+2025-11-29 17:26:09,933 [   1099]   INFO - #c.i.i.p.PluginManager - Loaded bundled plugins: IDEA CORE (252.28238.29), Images (252.28238.29), JSON (252.28238.29), YAML (252.28238.29), PyCharm Community and Prof Customization Shared Parts (252.28238.29), Qt (252.28238.29), Markdown (252.28238.29), Terminal (252.28238.29), Properties (252.28238.29), Python Community Edition (252.28238.29), DevKit Runtime (252.28238.29), IntelliLang (252.28238.29), Qodana (252.28238.29), AI Promo (252.28238.29), Copyright (252.28238.29), Machine Learning in Search Everywhere (252.28238.29), Shell Script (252.28238.29), Machine Learning in Marketplace (252.28238.29), Machine Learning Code Completion (252.28238.29), Notebook Files (252.28238.29), TextMate Bundles (252.28238.29), Japanese Language Pack / 日本語言語パック (252.28238.29), Monokai Color Scheme (252.28238.29), EditorConfig (252.28238.29), WarmNeon Color Scheme (252.28238.29), Task Management (252.28238.29), JetBrains Marketplace Licensing (252.28238.29), Chinese (Simplified) Language Pack / 中文语言包 (252.28238.29), Station (252.28238.29), GitHub Color Scheme (252.28238.29), Mercurial (252.28238.29), IDE Features Trainer (252.28238.29), Toml (252.28238.29), ReStructuredText (252.28238.29), Performance Testing (252.28238.29), Twilight Color Scheme (252.28238.29), Korean Language Pack / 한국어 언어 팩 (252.28238.29), Jupyter (252.28238.29), Natural Languages (252.28238.29), PyCharm Community Customization (252.28238.29), Git (252.28238.29), GitHub (252.28238.29-IC), GitLab (252.28238.29-IC), Backup and Sync (252.28238.29), Configuration Script (252.28238.29), Shared Indexes (252.28238.29), Shared Indexes for Python (252.28238.29), Code With Me (252.28238.29), Subversion (252.28238.29), Package Checker (252.28238.29), Async Profiler for IDE Performance Testing (252.28238.29)
+2025-11-29 17:26:09,935 [   1101]   INFO - #c.i.i.p.PluginManager - Loaded custom plugins: Eco-Cluster-Optimizer (1.0.0)
+2025-11-29 17:26:10,264 [   1430]   INFO - #c.i.u.i.PageCacheUtils - File page caching params:
+	DEFAULT_PAGE_SIZE: 10485760
+	Direct memory to use, max: 1551892480
+	FilePageCache: regular
+	Regular FilePageCache: 629145600 bytes
+	DirectByteBuffers pool: 104857600 bytes
+2025-11-29 17:26:10,735 [   1901]   INFO - #c.i.u.s.JBUIScale - System scale factor: 1.0 (IDE-managed HiDPI)
+2025-11-29 17:26:10,906 [   2072]   INFO - #c.i.o.v.n.p.PersistentFSLoader - VFS uses names enumerator over mmapped file
+2025-11-29 17:26:10,918 [   2084]   INFO - #c.i.o.v.n.p.PersistentFSLoader - VFS uses OverMMappedFile(pageSize=67108864, acquireStorageOwnership=true) storage for main file records table
+2025-11-29 17:26:10,919 [   2085]   INFO - #c.i.o.v.n.p.PersistentFSLoader - VFS uses content storage over memory-mapped file, with compression algo: LZ4[ > 8000b ]
+2025-11-29 17:26:10,920 [   2086]   INFO - #c.i.o.v.n.p.PersistentFSLoader - VFS uses streamlined attributes storage (over mmapped file)
+2025-11-29 17:26:13,401 [   4567]   INFO - #c.i.p.k.b.BackendKernelServiceKt - Backend started Kernel
+2025-11-29 17:26:13,411 [   4577]   INFO - c.i.p.i.IdeFingerprint - Calculated dependencies fingerprint in 3255 ms (hash=2tabr5yfagmbd, buildTime=1764252300, appVersion=PC-252.28238.29)
+2025-11-29 17:26:13,576 [   4742]   INFO - #c.i.a.o.PathMacrosImpl - Loaded path macros: {}
+2025-11-29 17:26:13,582 [   4748]   INFO - #c.i.o.a.ConfigImportHelper - [i18n] Localization property from registry is null
+2025-11-29 17:26:13,646 [   4812]   INFO - c.i.o.u.r.overrides - Plugin intellij.pycharm.community.customization.shared overrides the registry key welcome.screen.primaryButtonsCount declared by plugin com.intellij.
+2025-11-29 17:26:13,694 [   4860]   INFO - #c.i.o.v.n.p.PersistentFSLoader - VFS: impl (expected) version=846400, 0 file records, 0 content blobs
+2025-11-29 17:26:13,768 [   4934]   INFO - #c.i.o.v.n.p.FSRecordsImpl - VFS initialized: 2862 ms, 0 failed attempts, 0 error(s) were recovered
+2025-11-29 17:26:13,776 [   4942]   INFO - #c.i.o.v.n.p.FSRecordsImpl - VFS scanned: file-by-name index was populated
+2025-11-29 17:26:13,797 [   4963]   INFO - #c.i.o.v.n.p.FSRecords - VFS health-check enabled: first after 600000 ms, and each following 43200000 ms, wrap in RA: true
+2025-11-29 17:26:13,815 [   4981]   INFO - #c.i.o.v.n.p.PersistentFSImpl - VFS.MAX_FILE_LENGTH_TO_CACHE: 1048576
+2025-11-29 17:26:13,835 [   5001]   INFO - #c.i.i.p.ExpiredPluginsState - Plugins to skip: []
+2025-11-29 17:26:13,845 [   5011]   INFO - #fleet.kernel.Transactor - Very long change!!! Duration: 419.367615ms, change from: fleet.tracing.runtime.Span$Noop@66492c4e
+2025-11-29 17:26:14,577 [   5743]   INFO - #c.i.i.s.StatisticsRegionSettingsServiceImpl - Statistics. Region code is europe
+2025-11-29 17:26:14,935 [   6101]   INFO - #c.i.s.c.m.SettingsRepositoryToSettingsSyncMigration - No data from settingsRepository in 'settingsRepository' folder => no migration needed
+2025-11-29 17:26:15,707 [   6873]   INFO - #o.j.i.BuiltInServerManager - built-in server started, port 63342
+2025-11-29 17:26:16,284 [   7450]   INFO - #c.i.u.i.c.d.IndexWriter - Use com.intellij.util.indexing.contentQueue.dev.MultiThreadedWithSuspendIndexWriter@2749bd65 as (parallel) index writer implementation
+2025-11-29 17:26:16,295 [   7461]   INFO - #c.i.u.i.i.SlruIndexStorageCacheProvider - SLRU cache will be used for indexes
+2025-11-29 17:26:16,295 [   7461]   INFO - #c.i.u.i.i.MapIndexStorageCacheProvider$Companion - Default index storage cache provider [com.intellij.util.indexing.impl.SlruIndexStorageCacheProvider@3c25f1c] is used
+2025-11-29 17:26:16,302 [   7468]   INFO - #c.i.u.i.FileBasedIndexImpl - Loading indexes
+2025-11-29 17:26:16,350 [   7516]   INFO - #c.i.o.v.i.l.NativeFileWatcherImpl - Native file watcher is disabled
+2025-11-29 17:26:16,426 [   7592]   INFO - #c.i.i.s.p.i.SharedIndexMainZipStorage - Shared Indexes Storage is opened and empty
+2025-11-29 17:26:16,551 [   7717]   INFO - #c.i.u.n.s.CertificateManager - Default SSL context initialized
+2025-11-29 17:26:17,176 [   8342]   INFO - #c.i.f.n.TrigramIndexFilter - Filter exclude extensions is enabled: CustomizableExcludeExtensions([])
+2025-11-29 17:26:17,188 [   8354]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'filetypes' index (applicable providers: [default, fake-storage])
+2025-11-29 17:26:17,188 [   8354]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'Trigram.Index' index (applicable providers: [default, fake-storage]), shards = 1
+2025-11-29 17:26:17,188 [   8354]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'Stubs' index (applicable providers: [default, fake-storage])
+2025-11-29 17:26:17,189 [   8355]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'IdIndex' index (applicable providers: [default, fake-storage]), shards = 1
+2025-11-29 17:26:17,189 [   8355]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'FilenameIndex' index (applicable providers: [default, fake-storage])
+2025-11-29 17:26:17,190 [   8356]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'fileIncludes' index (applicable providers: [default, fake-storage])
+2025-11-29 17:26:17,193 [   8359]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'TodoIndex' index (applicable providers: [default, fake-storage])
+2025-11-29 17:26:17,237 [   8403]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'FrameworkDetectionIndex' index (applicable providers: [default, fake-storage])
+2025-11-29 17:26:17,323 [   8489]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'html5.custom.attributes.index' index (applicable providers: [default, fake-storage])
+2025-11-29 17:26:17,495 [   8661]   INFO - #c.i.i.s.e.StatisticsEventLoggerProvider - Initialize event logger provider for 'MLSE'
+2025-11-29 17:26:17,496 [   8662]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'XmlTagNames' index (applicable providers: [default, fake-storage])
+2025-11-29 17:26:17,510 [   8676]   INFO - #c.i.i.s.e.StatisticsEventLoggerProvider - Initialize event logger provider for 'FUS'
+2025-11-29 17:26:17,523 [   8689]   INFO - #c.i.i.s.e.StatisticsEventLoggerProvider - Initialize event logger provider for 'MP'
+2025-11-29 17:26:17,524 [   8690]   INFO - #c.i.i.s.e.StatisticsEventLoggerProvider - Initialize event logger provider for 'TRACE'
+2025-11-29 17:26:17,535 [   8701]   INFO - #c.i.i.s.e.StatisticsEventLoggerProvider - Initialize event logger provider for 'ML'
+2025-11-29 17:26:17,623 [   8789]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'XmlNamespaces' index (applicable providers: [default, fake-storage])
+2025-11-29 17:26:17,624 [   8790]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'SchemaTypeInheritance' index (applicable providers: [default, fake-storage])
+2025-11-29 17:26:17,639 [   8805]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'Py.module.name' index (applicable providers: [default, fake-storage])
+2025-11-29 17:26:17,654 [   8820]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'Py.setuptools.namespace' index (applicable providers: [default, fake-storage])
+2025-11-29 17:26:17,702 [   8868]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'xmlProperties' index (applicable providers: [default, fake-storage])
+2025-11-29 17:26:17,707 [   8873]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'DomFileIndex' index (applicable providers: [default, fake-storage])
+2025-11-29 17:26:17,708 [   8874]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'RelaxSymbolIndex' index (applicable providers: [default, fake-storage])
+2025-11-29 17:26:17,718 [   8884]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'editorconfig.index.name' index (applicable providers: [default, fake-storage])
+2025-11-29 17:26:17,719 [   8885]   INFO - #c.i.u.i.i.s.IndexStorageLayoutLocator - Layout 'default' will be used to for 'json.file.root.values' index (applicable providers: [default, fake-storage])
+2025-11-29 17:26:18,030 [   9196]   INFO - #c.i.u.i.FileBasedIndexImpl - Indices to be built:xmlProperties(v = 2),html5.custom.attributes.index(v = 1),Py.setuptools.namespace(v = 0),IdIndex(v = 22),json.file.root.values(v = 5),TodoIndex(v = 13),SchemaTypeInheritance(v = 2),RelaxSymbolIndex(v = 0),editorconfig.index.name(v = 5),XmlNamespaces(v = 8),FilenameIndex(v = 258),XmlTagNames(v = 1),DomFileIndex(v = 0),fileIncludes(v = 6),FrameworkDetectionIndex(v = 65536),Py.module.name(v = 0),Stubs(v = 46),filetypes(v = 4096),Trigram.Index(v = 4)
+2025-11-29 17:26:18,032 [   9198]   INFO - #c.i.u.i.FileBasedIndexImpl - Using simple flusher for indexes
+2025-11-29 17:26:18,040 [   9206]   INFO - #c.i.u.i.IndexDataInitializer - Index data initialization done: 1720 ms. Initialized indexes: [FilenameIndex, filetypes, html5.custom.attributes.index, XmlTagNames, Trigram.Index, TodoIndex, fileIncludes, IdIndex, Py.module.name, FrameworkDetectionIndex, SchemaTypeInheritance, XmlNamespaces, RelaxSymbolIndex, editorconfig.index.name, Stubs, json.file.root.values, xmlProperties, Py.setuptools.namespace, DomFileIndex].
+2025-11-29 17:26:18,206 [   9372]   INFO - #c.i.u.s.JBUIScale - Computed user scale factor: 1.0 (IDE-managed HiDPI)
+2025-11-29 17:26:18,221 [   9387]   INFO - #c.i.p.s.StubIndexImpl - Following stub indices will be built:Py.module.attribute(v = 2),properties.index(v = 2),Py.function.shortName(v = 2),Py.class.super(v = 2),Python.Decorator(v = 2),Py.class.attributes(v = 2),Py.TypeAliasName(v = 2),Py.variable.shortName(v = 3),Py.class.shortNameInsensitive(v = 2),Py.class.shortName(v = 2),dom.elementClass(v = 0),dom.namespaceKey(v = 1),markdown.header.anchor(v = 2),markdown.header(v = 2)
+2025-11-29 17:26:18,227 [   9393]   INFO - #c.i.u.i.IndexDataInitializer - Index data initialization done: 185 ms. Initialized stub indexes: {Python.Decorator, Py.function.shortName, Py.class.super, Py.class.shortNameInsensitive, Py.variable.shortName, Py.TypeAliasName, markdown.header, Py.module.attribute, properties.index, dom.namespaceKey, Py.class.shortName, dom.elementClass, markdown.header.anchor, Py.class.attributes}.
+2025-11-29 17:26:25,077 [  16243]   INFO - #c.i.i.p.m.MarketplaceRequests - Looking for the last compatible plugin updates for:
+[com.jetbrains.sh, Subversion, org.jetbrains.security.package-checker, Git4Idea, com.intellij.zh, PythonCore, tanvd.grazi, com.intellij.properties, intellij.jupyter, org.jetbrains.plugins.terminal, com.intellij.tasks, org.intellij.plugins.markdown, com.intellij.ko, com.intellij.qt, com.jetbrains.performancePlugin, org.jetbrains.plugins.yaml, org.toml.lang, org.editorconfig.editorconfigjetbrains, com.intellij.ja, com.intellij.copyright, org.jetbrains.plugins.textmate, org.jetbrains.completion.full.line, com.intellij.settingsSync, com.intellij.notebooks.core]
+Is update check: false
+2025-11-29 17:26:25,321 [  16487]   INFO - #c.i.i.p.n.PluginsGroupComponentWithProgress - Marketplace tab: loading stopped
+2025-11-29 17:26:26,230 [  17396]   INFO - #c.i.o.u.i.ExternalUpdateManager - update manager: -
+2025-11-29 17:26:30,212 [  21378]   INFO - #c.i.w.i.i.j.s.JpsGlobalModelSynchronizerImpl - Loading global entities com.intellij.platform.workspace.jps.entities.SdkEntity from files
+2025-11-29 17:26:30,222 [  21388]   INFO - #c.i.w.i.i.j.s.JpsGlobalModelSynchronizerImpl - Loading global entities com.intellij.platform.workspace.jps.entities.LibraryEntity from files
+2025-11-29 17:26:33,611 [  24777]   WARN - #c.i.i.u.UIThemeBean - Unknown field: CombinedDiff
+2025-11-29 17:26:33,614 [  24780]   WARN - #c.i.i.u.UIThemeBean - Unknown field: BlockBorder
+2025-11-29 17:26:34,621 [  25787]   INFO - #c.i.o.a.i.NonBlockingReadActionImpl - OTel monitoring for NonBlockingReadAction is enabled
+2025-11-29 17:26:38,163 [  29329]   WARN - #c.i.d.d.GridUtil - No settings for grid {GRID_CELL_EDITOR_HELPER_KEY=com.intellij.database.run.ui.grid.editors.GridCellEditorHelperImpl@3d41a63c, GRID_HELPER_KEY=com.intellij.database.datagrid.GridHelperImpl@50192be8, FACTORY_PROVIDER_KEY=com.intellij.database.run.ui.grid.editors.GridCellEditorFactoryImpl@6363c651, RENDERER_FACTORIES_KEY=com.intellij.database.run.ui.grid.renderers.GridCellRendererFactories@7eb58f0a, FORMATTER_CREATOR_KEY=com.intellij.database.datagrid.FormatterCreatorProvider$$Lambda/0x000000700318a958@4ef5a6a6, CONVERSION_GRAPH_KEY=com.intellij.database.data.types.BaseConversionGraph@57aa92fb}.Make sure DATA_GRID_SETTINGS_KEY set for your grid.TableResultPanel inheritors could use 'configurator' constructor parameter to pass settings
+2025-11-29 17:26:38,508 [  29674]   WARN - #c.i.d.d.GridUtil - No settings for grid {GRID_CELL_EDITOR_HELPER_KEY=com.intellij.database.run.ui.grid.editors.GridCellEditorHelperImpl@3d41a63c, GRID_HELPER_KEY=com.intellij.database.datagrid.GridHelperImpl@50192be8, FACTORY_PROVIDER_KEY=com.intellij.database.run.ui.grid.editors.GridCellEditorFactoryImpl@6363c651, RENDERER_FACTORIES_KEY=com.intellij.database.run.ui.grid.renderers.GridCellRendererFactories@7eb58f0a, FORMATTER_CREATOR_KEY=com.intellij.database.datagrid.FormatterCreatorProvider$$Lambda/0x000000700318a958@4ef5a6a6, CONVERSION_GRAPH_KEY=com.intellij.database.data.types.BaseConversionGraph@57aa92fb}.Make sure DATA_GRID_SETTINGS_KEY set for your grid.TableResultPanel inheritors could use 'configurator' constructor parameter to pass settings
+2025-11-29 17:26:38,541 [  29707]   WARN - #c.i.d.d.GridUtil - No settings for grid {GRID_CELL_EDITOR_HELPER_KEY=com.intellij.database.run.ui.grid.editors.GridCellEditorHelperImpl@3d41a63c, GRID_HELPER_KEY=com.intellij.database.datagrid.GridHelperImpl@50192be8, FACTORY_PROVIDER_KEY=com.intellij.database.run.ui.grid.editors.GridCellEditorFactoryImpl@6363c651, RENDERER_FACTORIES_KEY=com.intellij.database.run.ui.grid.renderers.GridCellRendererFactories@7eb58f0a, FORMATTER_CREATOR_KEY=com.intellij.database.datagrid.FormatterCreatorProvider$$Lambda/0x000000700318a958@4ef5a6a6, CONVERSION_GRAPH_KEY=com.intellij.database.data.types.BaseConversionGraph@57aa92fb}.Make sure DATA_GRID_SETTINGS_KEY set for your grid.TableResultPanel inheritors could use 'configurator' constructor parameter to pass settings
+2025-11-29 17:26:38,685 [  29851]   WARN - #c.i.d.d.GridUtil - No settings for grid {GRID_CELL_EDITOR_HELPER_KEY=com.intellij.database.run.ui.grid.editors.GridCellEditorHelperImpl@6e01334e, GRID_HELPER_KEY=com.intellij.database.datagrid.GridHelperImpl@60f8c7eb, FACTORY_PROVIDER_KEY=com.intellij.database.run.ui.grid.editors.GridCellEditorFactoryImpl@6363c651, RENDERER_FACTORIES_KEY=com.intellij.database.run.ui.grid.renderers.GridCellRendererFactories@38172693, FORMATTER_CREATOR_KEY=com.intellij.database.datagrid.FormatterCreatorProvider$$Lambda/0x000000700318a958@37fdf02, CONVERSION_GRAPH_KEY=com.intellij.database.data.types.BaseConversionGraph@64830760}.Make sure DATA_GRID_SETTINGS_KEY set for your grid.TableResultPanel inheritors could use 'configurator' constructor parameter to pass settings
+2025-11-29 17:26:38,723 [  29889]   WARN - #c.i.d.d.GridUtil - No settings for grid {GRID_CELL_EDITOR_HELPER_KEY=com.intellij.database.run.ui.grid.editors.GridCellEditorHelperImpl@6e01334e, GRID_HELPER_KEY=com.intellij.database.datagrid.GridHelperImpl@60f8c7eb, FACTORY_PROVIDER_KEY=com.intellij.database.run.ui.grid.editors.GridCellEditorFactoryImpl@6363c651, RENDERER_FACTORIES_KEY=com.intellij.database.run.ui.grid.renderers.GridCellRendererFactories@38172693, FORMATTER_CREATOR_KEY=com.intellij.database.datagrid.FormatterCreatorProvider$$Lambda/0x000000700318a958@37fdf02, CONVERSION_GRAPH_KEY=com.intellij.database.data.types.BaseConversionGraph@64830760}.Make sure DATA_GRID_SETTINGS_KEY set for your grid.TableResultPanel inheritors could use 'configurator' constructor parameter to pass settings
+2025-11-29 17:26:38,727 [  29893]   WARN - #c.i.d.d.GridUtil - No settings for grid {GRID_CELL_EDITOR_HELPER_KEY=com.intellij.database.run.ui.grid.editors.GridCellEditorHelperImpl@6e01334e, GRID_HELPER_KEY=com.intellij.database.datagrid.GridHelperImpl@60f8c7eb, FACTORY_PROVIDER_KEY=com.intellij.database.run.ui.grid.editors.GridCellEditorFactoryImpl@6363c651, RENDERER_FACTORIES_KEY=com.intellij.database.run.ui.grid.renderers.GridCellRendererFactories@38172693, FORMATTER_CREATOR_KEY=com.intellij.database.datagrid.FormatterCreatorProvider$$Lambda/0x000000700318a958@37fdf02, CONVERSION_GRAPH_KEY=com.intellij.database.data.types.BaseConversionGraph@64830760}.Make sure DATA_GRID_SETTINGS_KEY set for your grid.TableResultPanel inheritors could use 'configurator' constructor parameter to pass settings
+2025-11-29 17:26:39,408 [  30574]   WARN - #c.i.u.j.JBCefApp - JCEF is manually disabled in headless env via 'ide.browser.jcef.headless.enabled=false'
+2025-11-29 17:26:49,032 [  40198]   INFO - #o.j.p.t.TerminalOptionsProvider - Initialized TerminalOptionsProvider.cursorShape value to BLOCK
+2025-11-29 17:26:52,302 [  43468]   INFO - STDOUT - Found 187 configurables
+2025-11-29 17:26:53,114 [  44280]   INFO - #c.i.o.a.i.ActionUpdater - 14035 ms to grab EDT for CommonActionsPanel$AddButton#presentation@ToolbarDecorator (com.intellij.ui.CommonActionsPanel$AddButton)
+2025-11-29 17:26:53,114 [  44280]   INFO - #c.i.o.a.i.ActionUpdater - 14019 ms to grab EDT for CommonActionsPanel$RemoveButton#presentation@ToolbarDecorator (com.intellij.ui.CommonActionsPanel$RemoveButton)
+2025-11-29 17:26:53,119 [  44285]   INFO - #c.i.o.a.i.ActionUpdater - 14028 ms to grab EDT for CommonActionsPanel$EditButton#presentation@ToolbarDecorator (com.intellij.ui.CommonActionsPanel$EditButton)
+2025-11-29 17:26:53,233 [  44399]   INFO - #c.i.o.a.i.ActionUpdater - 616 ms to grab EDT for SwitchToRecentEditorActionGroup#children@GoToAction (com.intellij.diff.actions.SwitchToRecentEditorActionGroup)
+2025-11-29 17:26:53,250 [  44416]   WARN - #c.i.o.a.i.ActionUpdater - 42083 ms total to grab EDT 3 times to expand DefaultActionGroup#expandGroup@ToolbarDecorator (DefaultActionGroup). Use `ActionUpdateThread.BGT`.
+2025-11-29 17:26:54,898 [  46064]   INFO - #c.i.p.c.i.i.PyToolWindowLayoutProvider - Python default layout applied
+2025-11-29 17:26:55,964 [  47130]   INFO - #c.i.s.c.i.StationSocketConnectionLoop - RecentProjects connection successfully established
+2025-11-29 17:26:57,078 [  48244]   INFO - #c.i.c.p.p.ProvisionedCodeWithMeEnterpriseConfiguration - No JBIDES plugin found. Using public/self-configured CWM.
+2025-11-29 17:26:57,173 [  48339]   INFO - #c.i.r.OsRegistryConfigProvider - Looking for 'isCodeWithMeHostEnabled' value in [/etc/xdg/JetBrains/CodeWithMe/isCodeWithMeHostEnabled, /etc/xdg/JetBrains/CodeWithMe/config.json, /home/jakubgoleman/.config/JetBrains/CodeWithMe/isCodeWithMeHostEnabled, /home/jakubgoleman/.config/JetBrains/CodeWithMe/config.json]
+2025-11-29 17:26:57,215 [  48381]   INFO - #c.i.r.OsRegistryConfigProvider - OS provided value for 'isCodeWithMeHostEnabled' is not found
+2025-11-29 17:26:57,216 [  48382]   INFO - #c.i.r.OsRegistryConfigProvider - Looking for 'lobbyServerUrl' value in [/etc/xdg/JetBrains/CodeWithMe/lobbyServerUrl, /etc/xdg/JetBrains/CodeWithMe/config.json, /home/jakubgoleman/.config/JetBrains/CodeWithMe/lobbyServerUrl, /home/jakubgoleman/.config/JetBrains/CodeWithMe/config.json]
+2025-11-29 17:26:57,219 [  48385]   INFO - #c.i.r.OsRegistryConfigProvider - OS provided value for 'lobbyServerUrl' is not found
+2025-11-29 17:27:02,325 [  53491]   INFO - STDOUT - save to /home/jakubgoleman/best_hack/intellij-platform-plugin-template-main/build/tmp/buildSearchableOptions
+2025-11-29 17:27:02,612 [  53778]   INFO - #c.i.w.i.i.j.s.JpsGlobalModelSynchronizerImpl - Saving global entities com.intellij.platform.workspace.jps.entities.SdkEntity to files
+2025-11-29 17:27:02,625 [  53791]   INFO - #c.i.w.i.i.j.s.JpsGlobalModelSynchronizerImpl - Saving global entities com.intellij.platform.workspace.jps.entities.LibraryEntity to files
+2025-11-29 17:27:02,766 [  53932]   INFO - #c.i.c.ComponentStoreImpl - Saving default projectAutoImportSettings took 22 ms
+2025-11-29 17:27:02,853 [  54019]   INFO - #c.i.a.o.PathMacrosImpl - Saved path macros: {}
+2025-11-29 17:27:02,893 [  54059]   INFO - #c.i.c.ComponentStoreImpl - Saving appAdvancedSettings took 16 ms, FeatureUsageStatistics took 31 ms, FileTypeManager took 13 ms, GitLabAccounts took 11 ms
+2025-11-29 17:27:03,004 [  54170]   INFO - #c.i.i.s.EventLogApplicationLifecycleListener - Statistics. Don't start external uploader because there are no enabled logger providers
+2025-11-29 17:27:03,020 [  54186]   INFO - #c.i.i.s.e.u.EventLogExternalUploader - Statistics. Don't start external uploader because sending logs is disabled for all recorders
+2025-11-29 17:27:03,101 [  54267]   INFO - #c.i.o.f.i.FileTypeDetectionService - 23 auto-detected files. Detection took 79 ms
+2025-11-29 17:27:03,185 [  54351]   INFO - #o.j.i.BuiltInServer - web server stopped
+2025-11-29 17:27:03,263 [  54429]   INFO - #c.i.u.i.FileBasedIndexImpl - Index dispose started
+2025-11-29 17:27:03,275 [  54441]   INFO - #c.i.u.i.PersistentDirtyFilesQueue - Dirty file ids stored. Size: 0. Index: 0 Path: /home/jakubgoleman/best_hack/intellij-platform-plugin-template-main/build/idea-sandbox/PC-2025.2.5/system/index/dirty-file-ids
+2025-11-29 17:27:03,368 [  54534]   INFO - #c.i.p.s.StubIndexImpl - StubIndexExtension-s were unloaded
+2025-11-29 17:27:03,369 [  54535]   INFO - #c.i.p.s.SerializationManagerImpl - Start shutting down /home/jakubgoleman/best_hack/intellij-platform-plugin-template-main/build/idea-sandbox/PC-2025.2.5/system/index/rep.names
+2025-11-29 17:27:03,371 [  54537]   INFO - #c.i.p.s.SerializationManagerImpl - Finished shutting down /home/jakubgoleman/best_hack/intellij-platform-plugin-template-main/build/idea-sandbox/PC-2025.2.5/system/index/rep.names
+2025-11-29 17:27:03,373 [  54539]   INFO - #c.i.u.i.FileBasedIndexImpl - Index dispose completed in 110ms.
+2025-11-29 17:27:03,575 [  54741]   INFO - #c.i.o.v.n.p.PersistentFSImpl - VFS dispose started
+2025-11-29 17:27:03,576 [  54742]   INFO - #c.i.o.v.n.p.FSRecordsImpl - VFS closing
+2025-11-29 17:27:03,578 [  54744]   INFO - #c.i.o.v.n.p.PersistentFSImpl - VFS dispose completed in 3 ms.
+2025-11-29 17:27:03,999 [  55165]   INFO - #c.i.p.i.b.AppStarter - ------------------------------------------------------ IDE SHUTDOWN ------------------------------------------------------

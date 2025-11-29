@@ -1,0 +1,19 @@
+<idea-plugin>
+    <id>com.hackathon.eco</id>
+    <name>Eco-Cluster Optimizer</name>
+    <vendor>Hackathon Team</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <actions>
+        <action id="com.hackathon.eco.EcoRun" 
+                class="com.hackathon.eco.EcoRun" 
+                text="Sprawdź CO2 (Eco-Cluster)" 
+                description="Analiza emisji CO2 zaznaczonego fragmentu kodu">
+            
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+            
+            <keyboard-shortcut keymap="$default" first-keystroke="alt E"/>
+        </action>
+    </actions>
+</idea-plugin>
