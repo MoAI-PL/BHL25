@@ -1,0 +1,30 @@
+<idea-plugin>
+  <idea-version since-build="252" />
+  <change-notes><![CDATA[<h3>Added</h3>
+
+<ul><li>Initial release for Best Hack Hackathon 2025</li><li>Real-time code analysis (EcoAnnotator) for Python files<ul><li>Detection of inefficient <code>for</code> loops</li><li>Warning for file operations without context managers</li><li>Alert for wildcard imports</li></ul></li><li>CodeCarbon integration action (Alt+E)<ul><li>Automatic import injection</li><li>Code wrapping with EmissionsTracker</li><li>Template insertion for non-selected code</li></ul></li><li>Support for PyCharm Community 2025.2.5</li><li>Comprehensive documentation (README, INSTALL guide)</li><li>Test examples for all features</li></ul>
+
+<h3>Technical Details</h3>
+
+<ul><li>Built with Kotlin and IntelliJ Platform SDK</li><li>Package structure: <code>com.hackathon.eco</code></li><li>Minimum build: 252 (PyCharm 2025.2.5)</li><li>Dependencies: Python module support</li></ul>
+
+<h3>Features</h3>
+
+<ul><li><strong>Annotator</strong>: PSI-based static analysis</li><li><strong>Action</strong>: Document modification via WriteCommandAction</li><li><strong>UI</strong>: Editor popup menu integration</li><li><strong>Shortcuts</strong>: Alt+E keyboard shortcut</li></ul>]]></change-notes>
+  <version>1.0.0</version>
+  <id>com.hackathon.eco</id>
+  <name>Green Coding Assistant</name>
+  <vendor>MoAI</vendor>
+  <description><![CDATA[<p>This project is a PyCharm plugin prototype designed to act as a &quot;Green Coding Assistant,&quot; helping developers write energy-efficient Python code. It combines real-time static analysis (using eco-code-analyzer logic) to highlight code inefficiencies directly in the editor as you type, with runtime emissions tracking (using CodeCarbon) to measure and display the actual carbon footprint of your script after it runs. Built using Kotlin and the IntelliJ Platform, this proof of concept demonstrates how development tools can integrate sustainability metrics directly into the coding workflow.</p>]]></description>
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.modules.python</depends>
+  <extensions defaultExtensionNs="com.intellij">
+    <annotator language="Python" implementationClass="com.hackathon.eco.EcoAnnotator" />
+  </extensions>
+  <actions>
+    <action id="com.hackathon.eco.EcoRun" class="com.hackathon.eco.EcoRun" text="Calculate CO₂ Emissions" description="Calculates estimated carbon footprint of the Python code">
+      <add-to-group group-id="EditorPopupMenu" anchor="first" />
+      <keyboard-shortcut keymap="$default" first-keystroke="alt E" />
+    </action>
+  </actions>
+</idea-plugin>
