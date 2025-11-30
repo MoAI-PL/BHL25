@@ -125,6 +125,9 @@ class EcoRunWithTracking : AnAction() {
         val country = result.get("country_iso_code")?.asString ?: "unknown"
         val execOutput = result.get("execution_output")?.asString ?: ""
         
+        // Update the tool window score based on actual emissions
+        EcoScoreService.getInstance(project).updateFromCarbonTracking(emissionsGrams, durationSec, energyKwh)
+        
         val message = buildString {
             appendLine("🌍 Carbon Emission Tracking Report")
             appendLine("═══════════════════════════════════════")

@@ -22,6 +22,8 @@
     <annotator language="Python" implementationClass="com.hackathon.eco.EcoAnnotator" />
     <!-- Tool Window on left sidebar -->
     <toolWindow id="Green Coding" anchor="left" secondary="true" factoryClass="com.hackathon.eco.EcoToolWindowFactory" />
+    <!-- Project service for sharing eco scores -->
+    <projectService serviceImplementation="com.hackathon.eco.EcoScoreService" />
   </extensions>
   <actions>
     <!-- Static eco-code analysis using eco-code-analyzer -->

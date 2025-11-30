@@ -6,7 +6,7 @@ shared.index.file.content.hash.forward.index.sih.Py.TypeAliasName:1
 shared.index.file.content.hash.forward.index.sih.XmlNamespaces:2
 shared.index.file.content.hash.forward.index.sih.editorconfig.index.name:2
 shared.index.file.content.hash.forward.index.sih.Py.class.super:1
-shared.index.file.content.hash.forward.index.sih.FilenameIndex:3
+shared.index.file.content.hash.forward.index.sih.FilenameIndex:4
 shared.index.file.content.hash.forward.index.sih.json.file.root.values:2
 shared.index.file.content.hash.forward.index.sih.xmlProperties:2
 shared.index.file.content.hash.forward.index.sih.Py.module.name:1
@@ -23,12 +23,12 @@ shared.index.file.content.hash.forward.index.sih.Py.class.attributes:1
 shared.index.file.content.hash.forward.index.sih.SchemaTypeInheritance:2
 shared.index.file.content.hash.forward.index.sih.fileIncludes:2
 shared.index.file.content.hash.forward.index.sih.html5.custom.attributes.index:2
-shared.index.file.content.hash.forward.index.sih.dom.namespaceKey:1
 shared.index.file.content.hash.forward.index.sih.FrameworkDetectionIndex:2
+shared.index.file.content.hash.forward.index.sih.dom.namespaceKey:1
 shared.index.file.content.hash.forward.index.sih.Py.class.shortName:1
 shared.index.file.content.hash.forward.index.sih.RelaxSymbolIndex:2
 shared.index.file.content.hash.forward.index.sih.DomFileIndex:2
 shared.index.file.content.hash.forward.index.sih.Trigram.Index:2
-shared.index.file.content.hash.forward.index.sih.Py.function.shortName:1
 shared.index.file.content.hash.forward.index.sih.Py.class.shortNameInsensitive:1
+shared.index.file.content.hash.forward.index.sih.Py.function.shortName:1
 shared.index.file.content.hash.forward.index.sih.dom.elementClass:1

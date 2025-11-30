@@ -176,6 +176,18 @@ class EcoToolWindowPanel(
                 }
             }
         }, project)
+        
+        // Listen for runtime score updates from carbon tracking
+        project.messageBus.connect().subscribe(
+            EcoScoreService.SCORE_UPDATED_TOPIC,
+            object : EcoScoreService.ScoreUpdateListener {
+                override fun onScoreUpdated(score: Int, emissionsGrams: Double, durationSeconds: Double, energyKwh: Double) {
+                    ApplicationManager.getApplication().invokeLater {
+                        updateUIFromRuntimeScore(score, emissionsGrams, durationSeconds, energyKwh)
+                    }
+                }
+            }
+        )
     }
 
     private var scheduledAnalysis: java.util.concurrent.ScheduledFuture<*>? = null
@@ -302,6 +314,45 @@ class EcoToolWindowPanel(
             }
             toolWindow.setIcon(icon)
         }
+    }
+
+    /**
+     * Update the UI based on actual runtime carbon tracking results.
+     * This provides a more accurate score than static analysis.
+     */
+    private fun updateUIFromRuntimeScore(score: Int, emissionsGrams: Double, durationSeconds: Double, energyKwh: Double) {
+        currentScore = score
+        
+        // Update score display with runtime indicator
+        scoreLabel.text = "$score"
+        scoreLabel.foreground = getScoreColor(score)
+        
+        // Update status to show it's from runtime measurement
+        statusLabel.text = "⚡ Runtime score (actual measurement)"
+        
+        // Update details with runtime info
+        val details = buildString {
+            appendLine("Runtime Score: $score/100 ${getScoreEmoji(score)}")
+            appendLine()
+            appendLine("📊 Actual Measurements:")
+            appendLine("  • CO₂: ${String.format("%.6f", emissionsGrams)} g")
+            appendLine("  • Energy: ${String.format("%.9f", energyKwh)} kWh")
+            appendLine("  • Duration: ${String.format("%.3f", durationSeconds)} s")
+            appendLine()
+            appendLine("─".repeat(30))
+            appendLine()
+            appendLine("This score is based on actual")
+            appendLine("carbon emissions measured by")
+            appendLine("CodeCarbon during execution.")
+            appendLine()
+            appendLine("Lower emissions = Higher score")
+        }
+        
+        detailsArea.text = details
+        detailsArea.caretPosition = 0
+        
+        // Update tool window icon
+        updateToolWindowIcon(score)
     }
 
     private fun getScoreColor(score: Int): Color {
