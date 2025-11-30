@@ -69,10 +69,4 @@ cd green_code_V1.0
 ```
 
 
-
 Projekt stworzony podczas BHL25 Hackathon przez MOAI w kategorii AI.
-
-
-## Licencja
-
-MIT
