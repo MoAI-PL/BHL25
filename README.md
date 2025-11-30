@@ -61,10 +61,7 @@ Plugin zbudowany na 'IntelliJ Platform Plugin Template' – oficjalnym szablonie
 
 ## Instalacja
 
-# Zainstaluj zależności Python
 pip install codecarbon eco-code-analyzer
-
-# Zbuduj plugin
 cd green_code_V1.0
 ./gradlew buildPlugin
 
