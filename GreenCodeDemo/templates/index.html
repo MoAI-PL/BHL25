@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codeGreen - Code Efficiency Analyzer</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+</head>
+<body>
+    <!-- Console Output (top-right on desktop, bottom on mobile) -->
+    <div id="console-output" class="console-output">
+        <span class="console-cursor">› <span class="cursor-blink">▋</span></span>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">🌱</span>
+                <h1>codeGreen</h1>
+            </div>
+            <p class="subtitle">PyCharm Plugin Demo - Code Efficiency & Carbon Footprint Analyzer</p>
+        </header>
+
+        <!-- IDE Code Cell -->
+        <section class="ide-cell">
+            <!-- Static Analysis Banner - Shows automatically -->
+            <div id="static-score-bar" class="static-banner hidden">
+                <span class="banner-icon" id="static-icon">⚡</span>
+                <span class="banner-text" id="static-text">Analyzing...</span>
+            </div>
+
+            <!-- Editor Header (PyCharm style) -->
+            <div class="editor-header">
+                <div class="editor-tabs">
+                    <div class="editor-tab active">
+                        <span class="file-icon">🐍</span>
+                        <span class="file-name">script.py</span>
+                    </div>
+                </div>
+                <button id="load-dummy-btn" class="btn btn-ghost">
+                    📝 Load Example
+                </button>
+            </div>
+
+            <!-- Code Editor with Line Numbers -->
+            <div class="editor-body">
+                <div class="line-numbers" id="line-numbers">1</div>
+                <textarea id="code-editor" class="code-editor" placeholder="# Enter your Python code here..." spellcheck="false"></textarea>
+            </div>
+
+            <!-- Run Button Bar (PyCharm style) -->
+            <div class="run-bar">
+                <button id="analyze-runtime-btn" class="btn-run" title="Run and Measure (Ctrl+Enter)">
+                    <svg class="run-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    <span>Run & Measure</span>
+                </button>
+                <div class="run-bar-info">
+                    <span id="run-status" class="run-status">Ready</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <div id="results-section" class="results-section hidden">
+            
+            <!-- Runtime Results Panel -->
+            <div id="runtime-panel" class="result-panel runtime-panel hidden">
+                <div class="panel-header">
+                    <h3>🔬 Runtime Analysis</h3>
+                    <span class="panel-badge" id="runtime-badge">--</span>
+                </div>
+                
+                <div class="metrics-grid">
+                    <div class="metric">
+                        <span class="metric-label">Carbon Emissions</span>
+                        <span class="metric-value" id="emissions-value">--</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Efficiency Score</span>
+                        <span class="metric-value" id="runtime-score-value">--%</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Execution Time</span>
+                        <span class="metric-value" id="duration-value">-- ms</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Power Draw</span>
+                        <span class="metric-value" id="power-value">-- W</span>
+                    </div>
+                </div>
+
+                <!-- Runtime Score Bar -->
+                <div class="score-bar inline-score-bar">
+                    <div class="score-bar-inner">
+                        <div class="score-bar-fill" id="runtime-score-fill"></div>
+                    </div>
+                </div>
+
+                <!-- Output -->
+                <div id="output-section" class="output-section hidden">
+                    <h4>Program Output</h4>
+                    <pre id="program-output" class="output-box"></pre>
+                </div>
+            </div>
+
+            <!-- Issues Panel -->
+            <div id="issues-panel" class="result-panel issues-panel hidden">
+                <div class="panel-header">
+                    <h3>⚠️ Detected Issues</h3>
+                    <span class="panel-badge" id="issues-count">0</span>
+                </div>
+                <ul id="issues-list" class="issues-list"></ul>
+            </div>
+
+            <!-- Suggestions Panel -->
+            <div id="suggestions-panel" class="result-panel suggestions-panel hidden">
+                <div class="panel-header">
+                    <h3>💡 Suggestions</h3>
+                </div>
+                <ul id="suggestions-list" class="suggestions-list"></ul>
+            </div>
+        </div>
+
+        <!-- Loading Overlay -->
+        <div id="loading-overlay" class="loading-overlay hidden">
+            <div class="spinner"></div>
+            <span id="loading-text">Analyzing...</span>
+        </div>
+
+        <!-- Toast Notifications -->
+        <div id="toast-container" class="toast-container"></div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Powered by <strong>eco-code-analyzer</strong> & <strong>codecarbon</strong></p>
+            <p class="footer-hint">This demo simulates the codeGreen PyCharm plugin functionality</p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
