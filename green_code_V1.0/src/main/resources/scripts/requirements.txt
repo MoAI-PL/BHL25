@@ -1,0 +1,15 @@
+# Green Coding Assistant - Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# CodeCarbon - Carbon emissions tracking
+# Tracks actual CO2 emissions during code execution
+codecarbon>=2.3.0
+
+# eco-code-analyzer - Static code analysis for energy efficiency
+# Analyzes code patterns that impact energy consumption
+eco-code-analyzer>=0.1.0
+
+# Optional dependencies for better hardware detection
+psutil>=5.9.0  # System monitoring
+pynvml>=11.0.0  # NVIDIA GPU monitoring (optional)
+
